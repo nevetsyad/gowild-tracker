@@ -10,12 +10,12 @@
 <body>
   <main>
     <header class="top">
-      <p class="kicker">Project starter</p>
+      <p class="kicker">GoWild trip planner · prototype</p>
       <h1>GoWild Tracker</h1>
       <p class="lede">
-        Search sample Frontier-style GoWild seats, including one-stop connections.
-        This page does not talk to Frontier. Live inventory needs a separate worker;
-        GitHub Pages can only host the board.
+        Explore a demo of GoWild-only searches, including one-stop connections.
+        The flights below are illustrative sample data—not Frontier schedules,
+        fares, or seat availability.
       </p>
     </header>
 
@@ -40,19 +40,22 @@
           <option value="nonstop">Nonstop only</option>
         </select>
       </label>
-      <button type="submit">Search sample seats</button>
+      <button type="submit">Search demo inventory</button>
     </form>
 
     <p id="summary" class="summary"></p>
     <section id="results" aria-live="polite"></section>
 
     <section class="notes">
-      <h2>What this starter is</h2>
+      <h2>Current GoWild notes</h2>
       <ul>
-        <li>A route search over a small bundled timetable: origin, destination or anywhere, today or tomorrow, nonstop or one connection.</li>
-        <li>Connections need the same airport and at least 75 minutes between arrival and the next departure. Seats shown are the tighter leg.</li>
-        <li>A later worker would refresh real availability inside the GoWild booking window and replace this sample file. Booking stays on Frontier.</li>
+        <li>GoWild is capacity-controlled: a Frontier route or operating flight does not guarantee a GoWild seat. Confirm schedules and book directly with Frontier.</li>
+        <li>Frontier's published pass terms describe domestic booking beginning the day before departure and international booking beginning 10 days before departure. Puerto Rico is treated as domestic. Availability, fees, and restrictions can change; check the terms for your pass and trip.</li>
+        <li>Frontier currently advertises a 2027 Annual Pass with no blackout dates, but GoWild seats remain limited and peak-day charges may apply. No blackout dates does not mean a seat is guaranteed.</li>
+        <li>This prototype still searches a bundled demo timetable only. It does not query Frontier, and none of the displayed seat counts or flight numbers are real.</li>
+        <li>Connections are a planning aid, not a through-ticket: allow time for separate segments, and verify whether you must collect/recheck bags or clear customs.</li>
       </ul>
+      <p class="sources">Information checked Nov 19, 2026. Sources: <a href="https://www.flyfrontier.com/deals/gowild-pass/" target="_blank" rel="noopener">Frontier GoWild Pass terms</a> · <a href="https://www.flyfrontier.com/travel/my-trips/route-map/?mobile=true" target="_blank" rel="noopener">Frontier route map</a> · <a href="https://faq.flyfrontier.com/help/what-cities-does-frontier-fly-to" target="_blank" rel="noopener">Frontier destinations FAQ</a>.</p>
       <p id="marker" class="marker" hidden></p>
     </section>
   </main>
