@@ -13,9 +13,8 @@
       <p class="kicker">GoWild trip planner · prototype</p>
       <h1>GoWild Tracker</h1>
       <p class="lede">
-        Explore a demo of GoWild-only searches, including one-stop connections.
-        The flights below are illustrative sample data—not Frontier schedules,
-        fares, or seat availability.
+        Start with current Frontier fare leads from DCA, IAD, and BWI, or use the
+        demo search to explore how GoWild-only route and connection filtering could work.
       </p>
     </header>
 
@@ -28,19 +27,19 @@
           <option value="ANY">Anywhere</option>
         </select>
       </label>
-      <label>When
+      <label id="when-label">When
         <select id="when" name="when">
           <option value="0">Today</option>
           <option value="1">Tomorrow</option>
         </select>
       </label>
-      <label>Stops
+      <label id="stops-label">Stops
         <select id="stops" name="stops">
           <option value="any">Nonstop and 1-stop</option>
           <option value="nonstop">Nonstop only</option>
         </select>
       </label>
-      <button type="submit">Search demo inventory</button>
+      <button id="search-button" type="submit">Show DC-area fare leads</button>
     </form>
 
     <p id="summary" class="summary"></p>
@@ -52,10 +51,11 @@
         <li>GoWild is capacity-controlled: a Frontier route or operating flight does not guarantee a GoWild seat. Confirm schedules and book directly with Frontier.</li>
         <li>Frontier's published pass terms describe domestic booking beginning the day before departure and international booking beginning 10 days before departure. Puerto Rico is treated as domestic. Availability, fees, and restrictions can change; check the terms for your pass and trip.</li>
         <li>Frontier currently advertises a 2027 Annual Pass with no blackout dates, but GoWild seats remain limited and peak-day charges may apply. No blackout dates does not mean a seat is guaranteed.</li>
-        <li>This prototype still searches a bundled demo timetable only. It does not query Frontier, and none of the displayed seat counts or flight numbers are real.</li>
+        <li>The DC-area panel uses fare/date cards captured from Frontier's public city pages on Nov 19, 2026. These regular fares are not GoWild fares; they can change and are not live-checked by this static site.</li>
+        <li>Outside the DC-area fare view, search results are a bundled demo timetable only. They do not query Frontier, and none of those displayed seat counts or flight numbers are real.</li>
         <li>Connections are a planning aid, not a through-ticket: allow time for separate segments, and verify whether you must collect/recheck bags or clear customs.</li>
       </ul>
-      <p class="sources">Information checked Nov 19, 2026. Sources: <a href="https://www.flyfrontier.com/deals/gowild-pass/" target="_blank" rel="noopener">Frontier GoWild Pass terms</a> · <a href="https://www.flyfrontier.com/travel/my-trips/route-map/?mobile=true" target="_blank" rel="noopener">Frontier route map</a> · <a href="https://faq.flyfrontier.com/help/what-cities-does-frontier-fly-to" target="_blank" rel="noopener">Frontier destinations FAQ</a>.</p>
+      <p class="sources">Information checked Nov 19, 2026. Sources: <a href="https://flights.flyfrontier.com/en/flights-from-washington" target="_blank" rel="noopener">Frontier flights from Washington, D.C.</a> · <a href="https://flights.flyfrontier.com/en/flights-from-baltimore" target="_blank" rel="noopener">Frontier flights from Baltimore</a> · <a href="https://www.flyfrontier.com/deals/gowild-pass/" target="_blank" rel="noopener">Frontier GoWild Pass terms</a> · <a href="https://www.flyfrontier.com/travel/my-trips/route-map/?mobile=true" target="_blank" rel="noopener">Frontier route map</a>.</p>
       <p id="marker" class="marker" hidden></p>
     </section>
   </main>
