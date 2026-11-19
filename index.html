@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoWild Tracker</title>
+  <!-- gowild-tracker-starter-2026-11-19 -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="top">
+      <p class="kicker">Project starter</p>
+      <h1>GoWild Tracker</h1>
+      <p class="lede">
+        Search sample Frontier-style GoWild seats, including one-stop connections.
+        This page does not talk to Frontier. Live inventory needs a separate worker;
+        GitHub Pages can only host the board.
+      </p>
+    </header>
+
+    <form id="search" class="panel">
+      <label>From
+        <select id="from" name="from"></select>
+      </label>
+      <label>To
+        <select id="to" name="to">
+          <option value="ANY">Anywhere</option>
+        </select>
+      </label>
+      <label>When
+        <select id="when" name="when">
+          <option value="0">Today</option>
+          <option value="1">Tomorrow</option>
+        </select>
+      </label>
+      <label>Stops
+        <select id="stops" name="stops">
+          <option value="any">Nonstop and 1-stop</option>
+          <option value="nonstop">Nonstop only</option>
+        </select>
+      </label>
+      <button type="submit">Search sample seats</button>
+    </form>
+
+    <p id="summary" class="summary"></p>
+    <section id="results" aria-live="polite"></section>
+
+    <section class="notes">
+      <h2>What this starter is</h2>
+      <ul>
+        <li>A route search over a small bundled timetable: origin, destination or anywhere, today or tomorrow, nonstop or one connection.</li>
+        <li>Connections need the same airport and at least 75 minutes between arrival and the next departure. Seats shown are the tighter leg.</li>
+        <li>A later worker would refresh real availability inside the GoWild booking window and replace this sample file. Booking stays on Frontier.</li>
+      </ul>
+      <p id="marker" class="marker" hidden></p>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
